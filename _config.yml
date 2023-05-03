@@ -22,8 +22,8 @@ title: Codelyst
 email: dkstjswjd83@naver.com
 description: >- # this means to ignore newlines until "baseurl:"
     <팀블로그 소개> IT-tech를 기록해나가는 AI/SW 개발자 팀 블로그입니다.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: https://codelyst-team.github.io/codelyst.github.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "https://codelyst-team.github.io/codelyst.github.io/" # the subpath of your site, e.g. /blog
+url: "https://codelyst-team.github.io/codelyst.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
 
