@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div style="text-align: center; justify-content: center; padding: 0 0 2em 0 ">
+    <h1 style="font-family: nexon-regular">{{site.title}}_{{page.title}}</h1>
+    <p style="font-size: 1em">Codelyst가 운영하는 팀 개발 블로그</p>
+</div>
+<ul class="posts-list">
+    {% assign category = page.category | default: page.title %} {% for post in site.categories[category] %}
+    <div style="margin: 2em 0">
+        <h2 class="post-title">
+            <a href="{{ post.url }}"> {{ post.title }} </a>
+        </h1>
+        {{post.excerpt}}
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+        
+    </div>
+    {% endfor %}
+</ul>
