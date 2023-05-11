@@ -8,11 +8,11 @@ layout: default
 </div>
 <ul class="posts-list">
     {% assign category = page.category | default: page.title %} {% for post in site.categories[category] %}
-    <div style="margin: 2em 0">
+    <div style="border-bottom: solid 0.3px gray; margin: 2em 0; ">
         <h2 class="post-title">
             <a href="{{ post.url }}"> {{ post.title }} </a>
         </h1>
-        {{post.excerpt}}
+        <small>{{post.excerpt}}</small>
         <span class="post-date">{{ post.date | date_to_string }}</span>
         
     </div>
