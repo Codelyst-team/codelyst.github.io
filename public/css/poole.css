@@ -302,6 +302,8 @@ tbody tr:nth-child(odd) th {
  */
 
 .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
     max-width: 60rem;
     justify-content: center;
 }
