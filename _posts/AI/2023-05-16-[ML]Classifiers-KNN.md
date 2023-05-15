@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Classifier - KNN
+title: "[ML] Classifier - KNN"
 categories: AI
 author: 홍창현
 excerpt: 머신러닝
