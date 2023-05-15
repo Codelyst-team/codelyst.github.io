@@ -1,0 +1,47 @@
+---
+layout: post
+title: test
+categories: AI
+author: 홍창현
+excerpt: [ML] post
+---
+
+Learning(학습)
+학습에는 대표적으로 4가지의 종류가 있다.
+
+Supervised Learning(지도학습) : 예시(입력, 출력)를 관찰하고 입력에서 출력으로 매핑하는 함수를 배우는 학습
+Unsupervised Learning(비지도학습) : 명시적인 피드백이 없더라도 입력값에서 패턴을 학습 
+Reinforcement Learning(강화학습) : 일련의 reinforcements-rewards 혹은 punishments를 통해 학습
+Semi-supervised learning(준지도학습) : Supervised Learning + Unsupervised Learning
+
+Supervised Learning
+지도학습의 종류 : Classification(분류), Regression(회귀)
+
+
+
+Classification
+대표적인 3가지의 Classifier
+
+1. Insatance-based classifiers : Use observation directly (no model), 예시 : k nearest neighbors (KNN)
+2. Generative/probabilistic classifiers : Build a generative statistical model, 예시 : naive Bayes classifiers, Bayesian networks
+3. Discriminative classifiers : Directly estimate a decision rule/boundary, 예시 : decision tree
+ 
+
+K Nearest Neighbors (KNN)
+KNN 알고리즘은 매우 간단하고 놀랍게도 현재까지 효과적인 알고리즘이다. 여기서 K는 parameter이고 k=3, 5, 7 등으로 나타낼 수 있다. KNN은 샘플들간의 거리를 이용해서 label을 분류할 수 있다.
+
+ 
+
+예를 들어, 특정위치에 있는 X의 label을 알고 싶다고 하자.
+이 경우에 존재하는 모든 샘플과 X의 거리를 구해서 가장 가까운 샘플들을 K개 만큼 구한다.
+그리고 그 K개의 샘플의 label 중 가장 많은 label이 X의 label이 된다.
+
+여기서 거리는 일반적으로 유클리드거리를 사용한다. 데이터의 집합에 따라 거리함수를 재정의 할 수도 있고 샘플들과의 similarity를 측정해서 KNN을 사용할 수 있다. 즉, 거리함수만 있으면 되기에 KNN은 모델이 없다는 것이 특징이다.
+https://user-images.githubusercontent.com/48922050/238403674-703484a3-4bde-4b9e-add8-de7e6359821e.png
+
+K가 커질 수록 smoothness가 커지게 된다. 즉, 더욱 정교해지게 된다.
+
+또한, KNN을 확률론적으로 접근할 수도 있다. KNN이 하려고 하는 것은 데이터의 하위 집합에 대한 Bayes decision rule을 근사화 하는 것이다. Bayes rule을 이용하여 확률로 접근하면 아래와 같은 식을 구할 수 있다.
+https://user-images.githubusercontent.com/48922050/238403693-f52f6814-df49-4d93-a1ea-8c32dd6dc8ba.png
+https://user-images.githubusercontent.com/48922050/238403707-dafd3b3e-64c4-4476-9053-0bd20881c388.png
+위와 같이 Bayes rule을 이용하여 P(y=1|z)를 구할 수 있다. 이는 class가 1인 확률을 의미한다. 즉, Bayes decision rule을 사용하여 어떤 K를 사용하면 특정 class가 가장 많이 나오는지 파악할 수 있다.
