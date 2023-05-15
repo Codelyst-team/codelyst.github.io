@@ -1,10 +1,11 @@
 ---
 layout: post
-title: [ML] Classifier - KNN
+title: Classifier - KNN
 categories: AI
 author: 홍창현
-excerpt: [ML] post
+excerpt: 머신러닝
 ---
+
 
 Learning(학습)
 학습에는 대표적으로 4가지의 종류가 있다.
